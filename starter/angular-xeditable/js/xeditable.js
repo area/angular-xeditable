@@ -1,7 +1,7 @@
 /*!
 angular-xeditable - 0.1.8
 Edit-in-place for angular.js
-Build date: 2015-04-21 
+Build date: 2015-04-22 
 */
 /**
  * Angular-xeditable module 
@@ -155,6 +155,18 @@ angular.module('xeditable').directive('editableChecklist', [
       }
     });
 }]);
+/*
+Angular-ui bootstrap datepicker
+http://angular-ui.github.io/bootstrap/#/datepicker
+*/
+angular.module('xeditable').directive('editableGooglePlaces', ['editableDirectiveFactory',
+  function(editableDirectiveFactory) {
+    return editableDirectiveFactory({
+      directiveName: 'editableGooglePlaces',
+      inputTpl: '<input type="text" g-places-autocomplete>'
+    });
+}]);
+
 /*
 Input types: text|email|tel|number|url|search|color|date|datetime|time|month|week
 */
